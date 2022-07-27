@@ -35,5 +35,4 @@ if __name__ == '__main__':
                 host=os.getenv("HOST"),
                 port=int(os.getenv("PORT")),
                 workers=int(os.getenv("WORKERS")),
-                reload=True,
                 access_log=True)
