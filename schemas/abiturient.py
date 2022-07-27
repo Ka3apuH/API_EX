@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 
 class abiturient(BaseModel):
-    id: str = ""
+    #id: str = ""
     entrantId: str = ""
     entrantPersonalNumber: str = ""
     regNumber: str = ""

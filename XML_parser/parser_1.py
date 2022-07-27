@@ -36,7 +36,7 @@ def ret_list_of_abiturient(xml_file_content: bytes) -> List[Optional[abiturient]
 
 
                         result.append(abiturient(
-                            id='',#item.find('id'),
+                            #id='',#item.find('id'),
                             entrantId=item.get('entrantId', ""),
                             entrantPersonalNumber=item.find('entrantPersonalNumber').get_text(),
                             regNumber=item.get('regNumber', ""),
