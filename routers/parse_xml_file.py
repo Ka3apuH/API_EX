@@ -1,8 +1,6 @@
 import csv
 import io
 
-import json
-
 from fastapi import APIRouter, status, UploadFile, File
 
 from typing import Optional, List
@@ -27,9 +25,9 @@ async def create_csv(files: List[Optional[UploadFile]] = File(...)):
 
     fp = io.StringIO("")
 
-    writer = csv.DictWriter(fp, fieldnames=fieldnames, quotechar='"',quoting=csv.QUOTE_ALL)
+    writer = csv.DictWriter(fp, fieldnames=fieldnames, quotechar='"', quoting=csv.QUOTE_ALL)
     writer.writeheader()
     for person in abity:
-        writer.writerow(json.loads(abiturient(**person.dict()).json()))
+        writer.writerow(person.dict())
 
-    return StreamingResponse(io.BytesIO(bytes(fp.getvalue(),encoding='utf-8')), media_type="text/csv")
+    return StreamingResponse(io.BytesIO(bytes(fp.getvalue(), encoding='utf-8')), media_type="text/csv")
