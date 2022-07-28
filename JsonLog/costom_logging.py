@@ -65,7 +65,7 @@ class CustomizeLogger:
             )
 #curl -X GET http://localhost:8000/api/users
             logger.add(
-                sink=Path(__file__).absolute().parent / 'logs' / log_seting.get('filename'),
+                sink=Path(__file__).absolute().parents[1] / 'logs' / log_seting.get('filename'),
                 rotation=log_seting.get('rotation'),
                 enqueue=True,
                 backtrace=False,

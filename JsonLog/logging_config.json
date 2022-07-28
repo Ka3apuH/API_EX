@@ -2,7 +2,7 @@
   "loggers": [
         {
           "path": "logs/",
-          "filename": "PERCo_api_{time:YYYY-MM}.json",
+          "filename": "api_{time:YYYY-MM}.json",
           "level": "info",
           "rotation": "1 months",
           "retention": "3 months",
