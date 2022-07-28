@@ -7,7 +7,7 @@ from typing import Optional, List
 from loguru import logger
 from starlette.responses import StreamingResponse
 
-from XML_parser.parser_1 import ret_list_of_abiturient
+from XML_parser.parser_abiturients_xml import ret_list_of_abiturient
 from schemas.abiturient import abiturient
 
 router = APIRouter(prefix="/api", tags=['xml_parse'])
